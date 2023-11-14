@@ -1,13 +1,25 @@
-import React from 'react'
+import React from 'react';
+import Expanse from './Component/Expanse';
 
 const App = () => {
+
+  let expanse=[
+    {title:"Movie",price:200},
+    {title:"Transportation",price:500},
+    {title:"Travel",price:200},
+    {title:"Food",price:700},
+  ]
   return (
      <>
-
-     <h2>Expanse Item</h2>
-     <h3>Food Rs.100</h3>
-     <h3>Petrol Rs.400</h3>
-     <h3>Movie Rs.100</h3>
+      {
+        expanse.map(({title,price})=>(
+          <Expanse 
+          
+          title={title}
+          price={price}
+          />
+        ))
+      }
 
      </>
   )
