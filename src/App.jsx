@@ -3,6 +3,7 @@ import Expanse from './Component/Expanse';
 import Input from './Component/Input';
 
 import { v4 as uuidv4 } from 'uuid';
+import Form from './Component/Form';
 
 const App = () => {
 
@@ -39,7 +40,12 @@ const App = () => {
   return (
      <>
 
-     <Input  
+     <Form/>
+
+    {
+
+      /*
+    <Input  
      setExpenses={setExpenses} 
      expenses={expenses}    
        setEditingExpanse={setEditingExpanse}
@@ -63,6 +69,10 @@ const App = () => {
           />
         ))
       }
+
+
+      */
+    }
 
      </>
   )
