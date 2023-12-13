@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Input = ({setExpenses,expenses,setEditingExpanse,editingExpanse,title,price,setPrice,setTitle}) => {
 
-
+const [isValid,setIsValid]=useState(false);
 
     const handleAddExpense=()=>{
 
@@ -17,7 +17,15 @@ const Input = ({setExpenses,expenses,setEditingExpanse,editingExpanse,title,pric
 
         setEditingExpanse({});
       }else{
-        setExpenses([...expenses,{title,price,id:uuidv4()}]);
+
+        if(title ="" || price==0){
+          setIsValid(true);
+          return;
+        }else{
+          setIsValid(false);
+          setExpenses([...expenses,{title,price,id:uuidv4()}]);
+        }
+  
       }
     
        setTitle("");
@@ -41,7 +49,7 @@ const Input = ({setExpenses,expenses,setEditingExpanse,editingExpanse,title,pric
       <button onClick={handleAddExpense}>Add</button>
     
        </div>
-    
+       {isValid &&  <h2 style={{color:"red"}}>Pls fill the form!!</h2>}
     </div>
      
   )

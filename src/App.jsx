@@ -34,17 +34,16 @@ const App = () => {
     
   }
 
-  
+
 
 
   return (
      <>
+     
 
-     <Form/>
+    
 
-    {
-
-      /*
+      
     <Input  
      setExpenses={setExpenses} 
      expenses={expenses}    
@@ -56,8 +55,8 @@ const App = () => {
             setPrice={setPrice}
 
  />
-      {
-        expenses.length>0&&expenses.map(({title,price,id})=>(
+    
+      {  expenses.length>0&&expenses.map(({title,price,id})=>(
           <Expanse 
           
           title={title}
@@ -71,8 +70,8 @@ const App = () => {
       }
 
 
-      */
-    }
+      
+    
 
      </>
   )
