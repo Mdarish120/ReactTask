@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import {  toast } from 'react-toastify';
+
 
 const Input = ({setExpenses,expenses,setEditingExpanse,editingExpanse,title,price,setPrice,setTitle}) => {
 
@@ -18,7 +20,14 @@ const [isValid,setIsValid]=useState(false);
         setEditingExpanse({});
       }else{
 
-        if(title ="" || price==0){
+        if(title =="" || price==0){
+            if(title==""){
+              toast("Fill the title field");
+            }if(price <0){
+              toast("Do not fill negative value")
+            }if (price ==0){
+              toast("fill th price grater than 0")
+            }
           setIsValid(true);
           return;
         }else{

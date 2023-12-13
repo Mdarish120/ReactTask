@@ -4,6 +4,8 @@ import Input from './Component/Input';
 
 import { v4 as uuidv4 } from 'uuid';
 import Form from './Component/Form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -41,7 +43,7 @@ const App = () => {
      <>
      
 
-    
+     <ToastContainer/>
 
       
     <Input  
